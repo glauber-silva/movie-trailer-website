@@ -10,7 +10,7 @@ movies = []
 # Open the list of preferred movies
 f = open("preferred_movies.csv", 'r')
 
-# Change each fieldname to the appropriate field name. I know, so difficult.
+# Change each fieldname to the appropriate field name.
 reader = csv.DictReader(f, delimiter=';')
 
 # Parse the CSV into JSON
