@@ -4,9 +4,6 @@ import requests
 import media
 import fresh_tomatoes
 
-
-
-
 # list where the movie object will be stored
 movies = []
 
