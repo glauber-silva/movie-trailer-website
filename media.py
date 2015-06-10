@@ -2,12 +2,10 @@ import webbrowser
 
 
 class Movie():
-    """
-        This Class provided a way to store movie related information
-    """
+    """This Class provided a way to store movie related information"""
+
     def __init__(self, title, plot, poster_image, director, actors, released
         , trailer_youtube):
-        print("Movie Constructor Called")
         self.title = title
         self.plot = plot
         self.poster_image = poster_image

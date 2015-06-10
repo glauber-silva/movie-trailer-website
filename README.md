@@ -9,9 +9,11 @@ _______________________________________________________________________________
 To execute this project on Linux ( Debian / Ubuntu ), follow this step by step
 
 Run the following command in a directory of your choice.
+
 1 - $ git clone https://github.com/glauber-silva/movie-trailer-website.git
 
 If not installed git, run this command:
+
 $ sudo apt-ger install git
 
 Run the step 1, again:
