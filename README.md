@@ -2,7 +2,9 @@
 Simple project using some modules python to consume an API and set up a simple website with trailers and informations
 about my favorite movies.
 
-Project developed for course Full Stack Web Developer Nanodegree by Udacity.
+Project developed for self study.
+
+![CircleCI](https://circleci.com/gh/glauber-silva/movie-trailer-websaite.svg?style=svg)
 _______________________________________________________________________________
 
 
