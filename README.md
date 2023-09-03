@@ -4,7 +4,7 @@ about my favorite movies.
 
 Project developed for self study.
 
-![CircleCI](https://circleci.com/gh/glauber-silva/movie-trailer-websaite.svg?style=svg)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/glauber-silva/movie-trailer-website/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/glauber-silva/movie-trailer-website/tree/master)
 _______________________________________________________________________________
 
 
