@@ -8,7 +8,6 @@ from src.media import main_page_head, main_page_content, movie_tile_content
 
 
 class EntertaimentCenterServices:
-
     @classmethod
     def omdb_url(cls, title):
         # return f"http://www.omdbapi.com/?t={title}&y=&plot=short&r=json"
@@ -20,7 +19,9 @@ class EntertaimentCenterServices:
         with open("./preferred_movies.csv", "r") as file:
             reader = csv.DictReader(file, delimiter=";")
             for row in reader:
-                movies.movies.append(Movie(title=row["title"], trailer_youtube_url=row["link"]))
+                movies.movies.append(
+                    Movie(title=row["title"], trailer_youtube_url=row["link"])
+                )
 
         return movies
 
@@ -41,25 +42,26 @@ class EntertaimentCenterServices:
 
 
 class ContentService:
-
     @classmethod
     def create_movie_tiles_content(cls, movies: Movies) -> str:
         content = ""
 
         for movie in movies:
             # Extract the youtube ID from the URL
-            yt_id_match = re.search(r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
-            yt_id_match = yt_id_match or re.search(r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
+            yt_id_match = re.search(r"(?<=v=)[^&#]+", movie.trailer_youtube_url)
+            yt_id_match = yt_id_match or re.search(
+                r"(?<=be/)[^&#]+", movie.trailer_youtube_url
+            )
             trailer_yt_id = yt_id_match.group(0) if yt_id_match else None
 
             content += movie_tile_content.format(
-                movie_title = movie.title,
-                poster_image_url = movie.poster_image,
-                trailer_youtube_id = trailer_yt_id,
+                movie_title=movie.title,
+                poster_image_url=movie.poster_image,
+                trailer_youtube_id=trailer_yt_id,
                 actors=movie.actors,
                 director=movie.director,
                 released=movie.released,
-                plot=movie.plot
+                plot=movie.plot,
             )
 
         return content

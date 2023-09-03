@@ -9,6 +9,7 @@ class Movie:
     """
     This is to store movie's data related
     """
+
     title: str
     trailer_youtube_url: str
     plot: str = ""
@@ -16,7 +17,6 @@ class Movie:
     director: str = ""
     actors: str = ""
     released: str = ""
-
 
     def show_trailer(self):
         webbrowser.open(self.trailer_youtube_url)
@@ -27,4 +27,5 @@ class Movies:
     """
     It will store a List of the movies
     """
+
     movies: List = field(default_factory=list)
